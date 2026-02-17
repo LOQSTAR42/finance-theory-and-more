@@ -1,45 +1,109 @@
+/* ===== GLOBAL ===== */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+
+    background-image: url("../assets/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+    color: #0f172a;
 }
 
+/* Mobile background fix */
+@media (max-width: 600px) {
+    body {
+        background-attachment: scroll;
+    }
+}
+
+/* ===== HEADER ===== */
 header {
     background-color: #1e293b;
-    padding: 15px;
+    padding: 18px 0;
+}
+
+/* ===== NAVIGATION ===== */
+nav {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 nav a {
     color: #ffffff;
     text-decoration: none;
-    margin-right: 15px;
+    margin: 0 18px;
     font-weight: 500;
+    transition: color 0.2s ease, transform 0.2s ease;
 }
 
 nav a:hover {
-    text-decoration: underline;
+    color: #60a5fa;
+    transform: translateY(-2px);
 }
 
+/* ===== MAIN CONTENT CARD ===== */
 main {
     max-width: 900px;
-    margin: 30px auto;
-    padding: 0 20px;
-    background-color: #ffffff;
+    margin: 50px auto;
+    padding: 35px;
+
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
 }
 
-h1, h2 {
-    color: #1e293b;
+/* ===== HEADINGS ===== */
+h1 {
+    color: #0f172a;
+    font-size: 36px;
+    margin-bottom: 12px;
 }
 
+h2 {
+    color: #1e40af;
+    margin-top: 35px;
+    font-weight: 600;
+}
+
+/* ===== TEXT ===== */
+p {
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+/* ===== SECTION STRUCTURE ===== */
 article, section {
-    margin-bottom: 25px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid #e5e7eb;
 }
 
+article:last-child,
+section:last-child {
+    border-bottom: none;
+}
+
+/* ===== LINKS ===== */
+a {
+    color: #1e40af;
+    transition: opacity 0.2s ease;
+}
+
+a:hover {
+    opacity: 0.85;
+}
+
+/* ===== FOOTER ===== */
 footer {
     text-align: center;
-    padding: 15px;
-    background-color: #f1f1f1;
+    padding: 30px;
+    background-color: #e2e8f0;
     font-size: 14px;
+    color: #475569;
+    margin-top: 60px;
 }
